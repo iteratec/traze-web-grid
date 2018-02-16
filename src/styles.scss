@@ -1,0 +1,60 @@
+$space-blue: rgba(21, 171, 195, 1.0);
+$grid-color: #db1ed1;
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url("./assets/fonts/Orbitron-Regular.ttf") format("truetype");
+}
+
+body {
+  background: black;
+  color: $space-blue;
+  margin: 0;
+  overflow: hidden;
+}
+
+#traze-grid-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#traze-grid-background-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.traze-header-container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.traze-header {
+  font-family: Orbitron, monospace;
+  font-size: 150px;
+}
+
+.traze-glow {
+  box-shadow: 0 3px 0 0;
+  border-bottom: 1px solid;
+  height: 3px;
+}
+
+.trazer-font-style {
+  font-family: "Tr2n", monospace;
+  text-shadow: 0 0 5px #22AFCA;
+  color: #22AFCA;
+  line-height: 2;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
