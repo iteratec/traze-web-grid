@@ -1,6 +1,6 @@
 # Traze Web Grid
 
-Provides the traze web grid based on HTML and ES6 features to represent the game state with existing spawn points, bikes and their trails using multiple canvas layers.
+Provides the [traze](https://github.com/iteratec/traze) web grid based on HTML and ES6 features to represent the game state with existing spawn points, bikes and their trails using multiple canvas layers.
 
 ## Getting started
 
