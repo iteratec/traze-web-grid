@@ -9,7 +9,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 // define extraction plugin for styles
 const extractStylePlugin = new ExtractTextPlugin({
-    filename: "styles.[contenthash].css"
+    filename: "styles.[hash].css"
 });
 
 // define directory paths
@@ -17,6 +17,7 @@ const BUILD_DIR = path.resolve(__dirname, 'build');
 const APP_DIR = path.resolve(__dirname, 'src');
 
 const config = {
+    mode: 'production',
     entry: {
         'app': APP_DIR + '/index.ts'
     },
@@ -28,7 +29,7 @@ const config = {
         extensions: ['.ts', '.js']
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.(js)$/,
                 include: APP_DIR,
@@ -66,12 +67,18 @@ const config = {
             }
         ]
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendor',
+                    chunks: 'all'
+                }
+            }
+        }
+    },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: '[name].[hash].js',
-            minChunks: module => /node_modules/.test(module.resource)
-        }),
         new HtmlWebpackPlugin({
             title: 'Traze',
             filename: 'index.html',
