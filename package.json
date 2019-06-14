@@ -32,6 +32,6 @@
     "webpack-vendor-chunk-plugin": "^1.0.0"
   },
   "dependencies": {
-    "mqtt": "^2.18.8"
+    "mqtt": "^3.0.0"
   }
 }
