@@ -1,4 +1,4 @@
-FROM node:6 as builder
+FROM node:12 as builder
 
 ADD . /web-grid/
 RUN cd web-grid && npm install && npm run build

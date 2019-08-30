@@ -8,4 +8,4 @@ services:
     ports:
       - "8001:80"
     environment:
-      - APP_CONFIG='{"brokerUrl":"http://localhost:9001", "instanceName":"1"}'
+      - APP_CONFIG='{"brokerUrl":"wss://traze.iteratec.de:9443", "instanceName":"1"}'
